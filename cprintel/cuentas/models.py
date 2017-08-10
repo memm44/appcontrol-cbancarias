@@ -9,14 +9,14 @@ class Agregado(models.Model):
     nombre_banco = models.CharField(max_length=20)
     n_cta = models.CharField(max_length=20,unique=True)
     tipo_cta = models.CharField(max_length=20, choices=TIPO_CTA,null=True)
-    observacion = models.TextField(null=True)
+    observacion = models.TextField(blank=True,null=True)
     fecha_ag=models.DateField()
     def __str__(self):
         return '%s | %s' %(self.nombre_proveedor,self.nombre_banco)
 class Banco(models.Model):
     nombre=models.CharField(max_length=20)
     n_cta=models.CharField(max_length=20,unique=True)
-    agregados=models.ManyToManyField(Agregado)
+    agregados=models.ManyToManyField(Agregado,blank=True,null=True)
     fecha_b=models.DateField()
     def __str__(self):
         return self.nombre
