@@ -1,0 +1,69 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Material Design Bootstrap -->
+    <link href="{% static 'css/mdb.min.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+    <style rel="stylesheet">
+        /* TEMPLATE STYLES */
+
+        .nopadding {
+            margin-top: 0 !important;
+        }
+
+        .navbar {
+            background-color: #49071c;
+        }
+
+        footer.page-footer {
+            background-color: #49071c;
+            margin-top: 2rem;
+        }
+
+        .pattern-4 {
+            background-attachment: fixed;
+        }
+
+        .view {
+            background: url("https://mdbootstrap.com/img/Photos/Horizontal/Food/full%20page/9.jpg")no-repeat center center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            height: 100vh;
+        }
+
+        .full-bg-img {
+            color: #fff;
+        }
+
+        .payment .fa:not(:first-child) {
+            margin-left: 10px;
+            color: rgba(255, 255, 255, .8);
+        }
+
+        input[type="text"]:focus:not([readonly]) {
+            border-color: #C00;
+            box-shadow: 0 1px 0 0 #C00;
+            color: #fff;
+        }
+
+        input[type="text"]:not([readonly])+label {
+            color: rgba(255, 255, 255, .65);
+        }
+
+        input[type="text"]:focus:not([readonly])+label {
+            color: #fff;
+        }
+        .navbar .btn-group .dropdown-menu a:hover {
+            color: #000 !important;
+        }
+        .navbar .btn-group .dropdown-menu a:active {
+            color: #fff !important;
+        }
+    </style>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>{% block title %} {% endblock %}</title>
+    {% include "head_css.html" %}
+
+    <!-- Font Awesome -->
+    
+
+    <style>
+        .view{
+            background-image: url("{% static 'img/hero.jpg' %}");
+        }
+        .navbar {
+	    background-color: #133e5a;
+        }
+
+        footer.page-footer {
+	    background-color: #133e5a;
+	    margin-top: 2rem;
+        }
+        .navbar-dark .navbar-brand {
+	    color: #33b5e5;
+        }
+        .navbar.navbar-dark .breadcrumb .nav-item .nav-link, .navbar.navbar-dark .navbar-nav .nav-item .nav-link {
+	    color: #33b5e5;
+	/* transition: .35s; */
+}
+    </style>
+</head>
+
+<body>
+
+
+    <!--Navigation & Intro-->
+    <header>
+        {% include "navbar.html" %}  
+
+        
+
+    </header>
+    <!--/Navigation & Intro-->
+    {% block content %} 
+    <!--Mask-->
+    <div class="view hm-black-light">
+        <div class="full-bg-img flex-center pattern-4">
+            <ul>
+                <li>
+                    <h1 class="h1-responsive wow fadeInUp title"><strong>Sistema de Control de Cuentas Bancarias</strong></h1>
+                </li>
+                <li>
+                    <div class="row wow fadeIn" data-wow-delay="0.4s">
+                        <div class="col-md-3">
+                            <div class="md-form">
+                                <input type="text" id="form1" class="form-control">
+                                <label for="form1">Usuario</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="md-form">
+                                <input type="password" id="form2" class="form-control validate">
+                                <label for="form2">Contraseña</label>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="md-form">
+                                <button class="btn btn-lg btn-info">Entrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="payment">
+                    <i class="fa fa-cc-visa fa-2x" aria-hidden="true"></i>
+                    <i class="fa fa-cc-mastercard fa-2x" aria-hidden="true"></i>
+                    <i class="fa fa-money fa-2x" aria-hidden="true"></i>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--/.Mask-->
+
+    <!--Footer-->
+    <footer class="page-footer center-on-small-only nopadding ">
+
+        <!--Footer links-->
+        <div class="container-fluid">
+            <div class="row">
+                
+            </div>
+        </div>
+        <!--/.Footer links-->
+
+        <hr>
+
+       
+
+        <!--Copyright-->
+        <div class="footer-copyright">
+            <div class="container-fluid">
+                © 2015 Copyright: <a href="https://www.MDBootstrap.com"> MDBootstrap.com </a>
+
+            </div>
+        </div>
+        <!--/.Copyright-->
+
+    </footer>
+    <!--/.Footer-->
+    {% endblock %}
+    <!-- SCRIPTS -->
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="{% static 'js/jquery-3.1.1.min.js' %}"></script>
+
+    <!-- Bootstrap dropdown -->
+    <script type="text/javascript" src="{% static 'js/popper.min.js' %}"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="{% static 'js/mdb.min.js' %}"></script>
+
+    <script>
+        new WOW().init();
+    </script>
+
+</body>
+
+</html>
